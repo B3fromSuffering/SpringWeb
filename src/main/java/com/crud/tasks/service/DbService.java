@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DbService {
@@ -16,5 +17,13 @@ public class DbService {
         return repository.findAll();
     }
 
-
+    public Task findById(Long id) {
+        if (repository.findById(id).isPresent()) {
+            return repository.findById(id).get();
+        } else {
+            throw new IllegalArgumentException("There is no TASK with ID " + id);
+        }
+    }
 }
+
+
