@@ -25,8 +25,12 @@ dependencies {
 	}
 	compileOnly('org.projectlombok:lombok')
 	annotationProcessor('org.projectlombok:lombok')
+
+	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 
 test {
 	useJUnitPlatform()
 }
+
+apply plugin: 'war'
