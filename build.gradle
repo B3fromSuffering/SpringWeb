@@ -2,6 +2,8 @@ plugins {
 	id 'org.springframework.boot' version '2.2.5.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
+	id 'war'
+    id 'idea'
 }
 
 group = 'com.crud'
@@ -32,5 +34,3 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
-
-apply plugin: 'war'
