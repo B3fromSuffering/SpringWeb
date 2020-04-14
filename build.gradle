@@ -2,7 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.2.5.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
-	id 'war'
+	//id 'war'
     id 'idea'
 }
 
@@ -18,7 +18,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.projectlombok:lombok')
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('mysql:mysql-connector-java')
+	//compile('mysql:mysql-connector-java')
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -28,7 +28,7 @@ dependencies {
 	compileOnly('org.projectlombok:lombok')
 	annotationProcessor('org.projectlombok:lombok')
 
-	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+	//providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 
 test {
