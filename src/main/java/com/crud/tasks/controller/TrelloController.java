@@ -40,6 +40,7 @@ public class TrelloController {
     public CreatedTrelloCard createTrelloCard(@RequestBody TrelloCardDto trelloCardDto) {
 
         CreatedTrelloCard createdTrelloCard = trelloClient.createNewCard(trelloCardDto);
+
         System.out.println("you created new card with board number: "  + createdTrelloCard.getBadges().getAttachmentsByType().getTrello().getBoard()
         + " and card number: " + createdTrelloCard.getBadges().getAttachmentsByType().getTrello().getCard());
 
