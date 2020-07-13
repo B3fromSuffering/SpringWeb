@@ -6,24 +6,17 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-
-@Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Entity(name = "tasks")
-public class Task {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class CreatedTaskDto {
     @JsonProperty("id")
-    private Long id;
+    private String id;
 
-    @Column(name = "name")
-    @JsonProperty("title")
-    private String title;
+    @JsonProperty("name")
+    private String name;
 
-    @Column(name = "description")
-    @JsonProperty("content")
-    private String content;
+    @JsonProperty("shortUrl")
+    private String shortUrl;
 }
